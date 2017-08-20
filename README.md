@@ -1,2 +1,7 @@
 # Test
-HTML Testing
+HTML Testing repository
+things to remember:
+- one
+- two
+- three
+- four

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>1890-1898 Woodland Daily Democrat News Clips</title>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="https:/resources/demos/style.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+</head>
+<body>
+
+
+<h2>1890-1898 Woodland Daily Democrat News Clips:</h2>
+
+<div>
+	<img class="image" src="aug191890.jpg" alt="August 19, 1890" >
+	<h3>August 19, 1890</h3>
+	<p>"This will make the finest store in town"</p>
+</div>
+<div>
+	<img class="image" src="Oct81891.jpg" alt="October 8, 1891" >
+	<h3>October 8, 1891</h3>
+	<p>"...a new bank with a capital of $100,000.."</p>
+</div>
+
+	<ul>
+		<li>
+			<a href=http://freepages.history.rootsweb.ancestry.com/~brickdeadairvault/19August1890.html>August 19, 1890 <i>"This will make the finest store in town"</i></a>
+		</li>
+		
+		<li>
+			<a href=http://freepages.history.rootsweb.ancestry.com/~brickdeadairvault/Oct81891.jpg>October 8, 1891 <i>"...a new bank with a capital of $100,000.."</i></a> 
+		</li>
+
+		<li>
+			<a href=http://freepages.history.rootsweb.ancestry.com/~brickdeadairvault/Nov251891.jpg>November 25, 1891 <i>"...has put in a vault as large as any of the bank vaults.."</i></a>
+		</li>
+
+
+		<li>
+			<a href=http://freepages.history.rootsweb.ancestry.com/~brickdeadairvault/Dec161891.jpg>December 16, 1891 <i>"Plumbers are at work putting in the gas and water pipes.."</i></a>
+		</li> 
+		<li>
+			<a href=http://freepages.history.rootsweb.ancestry.com/~brickdeadairvault/Dec191891.jpg>December 19, 1891<i>"...will begin business January 15, 1892"</i></a>
+		</li>
+
+		<li>
+			<a href=http://freepages.history.rootsweb.ancestry.com/~brickdeadairvault/feb91892.jpg>February 9, 1892 <i>"...Banking establishment opened Monday..."</i></a>
+		</li> 
+		<li>
+			<a href=http://freepages.history.rootsweb.ancestry.com/~brickdeadairvault/Aug1892.jpg>August 1892 <i>"Real Estate Transfers"</i></a>
+		</li>
+		<li>	
+			<a href=http://freepages.history.rootsweb.ancestry.com/~brickdeadairvault/Sept91892.jpg>September 9, 1892<i>"...transferred to P.T. Laugenour"</i></a>
+		</li>
+	</ul>
+
+<div id="floater"  title="Newspaper Clip" style="position: absolute;">
+	<img id="imgbig" src="">
+</div>
+
+
+<script type="text/javascript">
+		
+	$('.image').each(function(i){
+		$(this).width(70).height(70);
+		$(this).css( 'cursor', 'pointer' );
+	});
+
+	$('.image').mousemove(function(e){
+		$('#floater').show("slow");
+		if ($('#imgbig').attr('src') != $(this).attr('src')  ){ 
+			$('#imgbig').attr('src', $(this).attr('src') );
+		}
+		$('#floater').css({'top': e.clientY + 20, 'left': e.clientX + 20});
+
+	}).mouseleave(function(e){
+		$('#floater').hide();
+	});
+
+	$('.image').click(function(e){
+		$('#floater').width($('#imgbig').width() ).height($('#imgbig').height() ).dialog();
+	});
+
+
+
+</script>
+
+</html>
